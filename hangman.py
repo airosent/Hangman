@@ -71,6 +71,8 @@ end_of_game = False
 
 while not end_of_game:
   guess = input("Guess a letter: ").lower()
+  if guess in display:
+    print(f"You have already guessed {guess}!")
   #Check guessed letter
   for position in range(word_length):
       letter = chosen_word[position]
